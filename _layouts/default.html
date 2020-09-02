@@ -4,6 +4,21 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{ page.title }}</title>
+
+	<link rel="stylesheet" href="/css/default.css">
+
+	{% if page.custom_css %}
+		{% for css_file in page.custom_css %}
+			<link rel="stylesheet" href="{{ css_file }}">
+		{% endfor %}
+	{% endif %}
+
+	{% if page.custom_js %}
+		{% for js_file in page.custom_js %}
+			<script defer src="{{ js_file }}"></script>
+		{% endfor %}
+	{% endif %}
+
 </head>
 <body>
 	{{ content }}
