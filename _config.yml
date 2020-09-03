@@ -1,0 +1,7 @@
+safe: true
+ignore_theme_config: true
+
+exclude: [
+	"*.sh",
+	"*.md"
+]
