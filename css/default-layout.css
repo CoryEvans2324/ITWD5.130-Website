@@ -39,8 +39,13 @@ a {
 }
 
 .layout-nav-item {
-	padding: 1em 2em;
 	text-align: center;
+}
+
+.layout-nav-item a {
+	display: inline-block;
+	width: 100%;
+	padding: 1em 2em;
 }
 
 .layout-nav-item:hover {
@@ -70,7 +75,7 @@ a {
 	color: #000000;
 }
 
-.layout-footer-item:hover {
+.layout-footer-item a:hover {
 	cursor: pointer;
 	color: #555555;
 }
