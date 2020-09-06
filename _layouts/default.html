@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{ page.title }}</title>
 
-	<link rel="stylesheet" href="/css/default.css">
+	<link rel="stylesheet" href="/css/default-layout.css">
+	<script defer src="/js/default-layout.js"></script>
 
 	{% if page.custom_css %}
 		{% for css_file in page.custom_css %}
@@ -21,6 +22,35 @@
 
 </head>
 <body>
-	{{ content }}
+	<div class="layout-header margin-center">
+		<div class="layout-banner">
+			<a href="/">
+				<!-- https://i.picsum.photos/id/826/1200/100.jpg -->
+				<img src="/images/placeholder/1200x100.jpg"></a>
+		</div>
+		<div class="layout-nav">
+			<div class="layout-nav-item"><a href="/">Home</a></div>
+			<div class="layout-nav-item"><a href="/">Services</a></div>
+			<div class="layout-nav-item"><a href="/">Projects</a></div>
+			<div class="layout-nav-item"><a href="/">Contact Us</a></div>
+			<div class="layout-nav-item"><a href="/">About Us</a></div>
+		</div>
+	</div>
+
+	<div class="layout-content margin-center">
+		{{ content }}
+	</div>
+
+	<div class="layout-footer margin-center">
+		<div class="layout-footer-item">
+			<a href="/">About Us</a>
+		</div>
+		<div class="layout-footer-item">
+			<a href="/">Contact Us</a>
+		</div>
+		<div class="layout-footer-item">
+			<a href="https://github.com/CoryEvans2324">github.com/CoryEvans2324</a>
+		</div>
+	</div>
 </body>
 </html>
