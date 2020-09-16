@@ -65,8 +65,7 @@ a {
 }
 
 #layout-nav-toggle {
-	font-size: 48px;
-	line-height: 32px;
+	margin-top: -4px;
 	float: right;
 }
 
@@ -104,7 +103,7 @@ a {
 }
 
 .layout-content {
-	margin: 1em auto;
+	margin: 1em 0.25em;
 }
 
 .layout-footer {
