@@ -1,3 +1,39 @@
-.content {
+.content-heading {
+	margin-bottom: 1em;
+}
+
+.content-heading h1 {
+	text-align: center;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.content-heading img {
+	display: block;
+	margin: 0 auto;
+	width: 200px;
+}
+
+.quote {
+	margin-top: 2em;
+}
+.quote h1 {
+	text-align: center;
+}
+
+.field {
 	width: 100%;
+	display: block;
+}
+
+.field input, textarea, label {
+	width: 100%;
+}
+
+.field textarea {
+	padding: 0.4em;
+}
+
+.field label {
+	text-transform: capitalize;
 }

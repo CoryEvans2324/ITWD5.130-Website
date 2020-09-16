@@ -1,3 +1,17 @@
+/*
+#2a9d8f
+#13293d
+#e58f65
+#bac6c9
+*/
+
+:root {
+	--main-light-color: #2a9d8f;
+	--main-dark-color: #13293d;
+	--main-bright-color: #e58f65;
+	--main-dull-color: #bac6c9;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -7,6 +21,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	position: relative;
+	background-color: var(--main-dull-color);
 }
 
 a {
@@ -34,11 +49,13 @@ a {
 .layout-nav {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
-	background-color: rgb(112, 252, 244);
+	background-color: var(--main-dark-color);
+	color: white;
 	overflow: hidden;
 }
 
 .layout-nav-item {
+	position: relative;
 	text-align: center;
 }
 
@@ -50,15 +67,24 @@ a {
 
 .layout-nav-item:hover {
 	cursor: pointer;
-	background-color: rgb(82, 222, 214);
+	background-color: var(--main-light-color);
+}
+
+.layout-nav-active::after {
+	content: "";
+	position: absolute;
+	width: 80%;
+	bottom: calc(1em - 3px);
+	left: 50%;
+	transform: translateX(-50%);
+	border-bottom: 2px solid var(--main-bright-color);
 }
 
 .layout-content {
-	margin-bottom: calc(2.5rem * 3);
+	margin: 1em;
 }
 
 .layout-footer {
-	position: fixed;
 	width: 100%;
 	height: calc(2.5rem * 3);
 
@@ -67,17 +93,17 @@ a {
 
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
-	background-color: rgb(112, 252, 244);
+	background-color: var(--main-dark-color);
 }
 
 .layout-footer-item {
 	text-align: center;
-	color: #000000;
+	color: white;
 }
 
 .layout-footer-item a:hover {
 	cursor: pointer;
-	color: #555555;
+	color: var(--main-light-color);
 }
 
 

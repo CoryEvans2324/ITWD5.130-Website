@@ -8,15 +8,15 @@
 	<link rel="stylesheet" href="/css/default-layout.css">
 	<script defer src="/js/default-layout.js"></script>
 
-	{% if page.custom_css %}
-		{% for css_file in page.custom_css %}
-			<link rel="stylesheet" href="{{ css_file }}">
+	{% if page.css %}
+		{% for css_file in page.css %}
+			<link rel="stylesheet" href="{{ css_file | relative_url }}">
 		{% endfor %}
 	{% endif %}
 
-	{% if page.custom_js %}
-		{% for js_file in page.custom_js %}
-			<script defer src="{{ js_file }}"></script>
+	{% if page.js %}
+		{% for js_file in page.js %}
+			<script defer src="{{ js_file | relative_url }}"></script>
 		{% endfor %}
 	{% endif %}
 
@@ -29,11 +29,11 @@
 				<img src="/images/placeholder/1200x100.jpg"></a>
 		</div>
 		<div class="layout-nav">
-			<div class="layout-nav-item"><a href="/">Home</a></div>
-			<div class="layout-nav-item"><a href="/">Services</a></div>
-			<div class="layout-nav-item"><a href="/">Projects</a></div>
-			<div class="layout-nav-item"><a href="/">Contact Us</a></div>
-			<div class="layout-nav-item"><a href="/">About Us</a></div>
+			<div class="layout-nav-item{% if page.active_nav == 'Home' %} layout-nav-active{% endif %}"><a href="/">Home</a></div>
+			<div class="layout-nav-item{% if page.active_nav == 'Services' %} layout-nav-active{% endif %}"><a href="/services.html">Services</a></div>
+			<div class="layout-nav-item{% if page.active_nav == 'Projects' %} layout-nav-active{% endif %}"><a href="/">Projects</a></div>
+			<div class="layout-nav-item{% if page.active_nav == 'Contact Us' %} layout-nav-active{% endif %}"><a href="/">Contact Us</a></div>
+			<div class="layout-nav-item{% if page.active_nav == 'About Us' %} layout-nav-active{% endif %}"><a href="/">About Us</a></div>
 		</div>
 	</div>
 
