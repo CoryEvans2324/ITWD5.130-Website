@@ -3,3 +3,6 @@ _site/
 
 audio/
 images/
+video/
+
+*.sh
