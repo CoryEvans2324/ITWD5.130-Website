@@ -34,12 +34,10 @@
 			<a href="#" id="layout-nav-toggle" onclick="toggle_nav();">&#9776;</a>
 		</div>
 		<nav id="layout-nav" class="layout-nav">
-			<ul>
-				<li class="layout-nav-item{% if page.active_nav == 'Services' %} layout-nav-active{% endif %}"><a href="/services.html">Services</a></li>
-				<li class="layout-nav-item{% if page.active_nav == 'Projects' %} layout-nav-active{% endif %}"><a href="/projects.html">Projects</a></li>
-				<li class="layout-nav-item{% if page.active_nav == 'Contact Us' %} layout-nav-active{% endif %}"><a href="/contact-us.html">Contact Us</a></li>
-				<li class="layout-nav-item{% if page.active_nav == 'About Us' %} layout-nav-active{% endif %}"><a href="/about-us.html">About Us</a></li>
-			</ul>
+				<a class="layout-nav-item {% if page.active_nav == 'Services' %}layout-nav-active{% endif %}" href="/services.html">Services</a>
+				<a class="layout-nav-item {% if page.active_nav == 'Projects' %}layout-nav-active{% endif %}" href="/projects.html">Projects</a>
+				<a class="layout-nav-item {% if page.active_nav == 'Contact Us' %}layout-nav-active{% endif %}" href="/contact-us.html">Contact Us</a>
+				<a class="layout-nav-item {% if page.active_nav == 'About Us' %}layout-nav-active{% endif %}" href="/about-us.html">About Us</a>
 		</nav>
 	</div>
 
@@ -49,10 +47,10 @@
 
 	<div class="layout-footer">
 		<div class="layout-footer-item">
-			<a href="/">About Us</a>
+			<a href="/about-us.html">About Us</a>
 		</div>
 		<div class="layout-footer-item">
-			<a href="/">Contact Us</a>
+			<a href="/contact-us.html">Contact Us</a>
 		</div>
 		<div class="layout-footer-item">
 			<a href="https://github.com/CoryEvans2324">github.com/CoryEvans2324</a>

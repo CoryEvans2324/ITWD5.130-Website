@@ -7,11 +7,11 @@ function toggle_nav()
 
 	if (nav_toggle_shown_state) {
 		// closed
-		nav.style.height = null;
+		nav.style.maxHeight = '0px';
 		btn.innerHTML = '☰';
 	} else {
 		// open
-		nav.style.height = 'auto';
+		nav.style.maxHeight = '400px';
 		btn.innerHTML = '×';
 	}
 
