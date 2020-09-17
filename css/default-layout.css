@@ -22,6 +22,8 @@ body {
 	font-family: 'Roboto', sans-serif;
 	position: relative;
 	background-color: var(--main-dull-color);
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 a {
@@ -35,6 +37,10 @@ a {
 
 .layout-header {
 	width: 100%;
+	background-color: var(--main-dark-color);
+	color: white;
+	text-transform: uppercase;
+	margin: 0 auto;
 }
 
 .layout-banner {
@@ -46,12 +52,29 @@ a {
 	height: 100%;
 }
 
-.layout-nav {
-	display: grid;
-	grid-template-columns: repeat(1, 1fr);
-	background-color: var(--main-dark-color);
+.layout-header-menu {
+	font-size: 32px;
+	font-weight: 800;
+	margin: 2px 10px;
+
 	color: white;
+}
+
+.layout-header-menu a {
+	position: relative;
+}
+
+#layout-nav-toggle {
+	font-size: 48px;
+	line-height: 32px;
+	float: right;
+}
+
+.layout-nav {
+	display: block;
 	overflow: hidden;
+	transition: all 0.13s ease;
+	height: 0px;
 }
 
 .layout-nav-item {
@@ -62,7 +85,7 @@ a {
 .layout-nav-item a {
 	display: inline-block;
 	width: 100%;
-	padding: 1em 2em;
+	padding: 0.8em 2em;
 }
 
 .layout-nav-item:hover {
@@ -74,25 +97,22 @@ a {
 	content: "";
 	position: absolute;
 	width: 80%;
-	bottom: calc(1em - 3px);
+	bottom: 3px;
 	left: 50%;
 	transform: translateX(-50%);
 	border-bottom: 2px solid var(--main-bright-color);
 }
 
 .layout-content {
-	margin: 1em;
+	margin: 1em auto;
 }
 
 .layout-footer {
-	width: 100%;
-	height: calc(2.5rem * 3);
+	display: block;
+	margin: 0 auto;
 
-	bottom: 0;
 	padding: 0.5rem;
 
-	display: grid;
-	grid-template-columns: repeat(1, 1fr);
 	background-color: var(--main-dark-color);
 }
 
@@ -106,16 +126,24 @@ a {
 	color: var(--main-light-color);
 }
 
+/* @media (min-width: 750px) { */
+@media (min-width: 600px) {
+	#layout-nav-toggle {
+		display: none;
+	}
 
-@media (min-width: 750px) {
+	.layout-header-menu a {
+		text-align: center;
+		display: block;
+	}
+
 	.layout-nav {
-		grid-template-columns: repeat(5, 1fr);
+		height: auto;
 	}
-	.layout-content {
-		margin-bottom: calc(2.5rem * 1);
-	}
-	.layout-footer {
-		grid-template-columns: repeat(3, 1fr);
-		height: calc(2.5rem * 1);
+
+	.layout-nav ul {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		list-style-type: none;
 	}
 }
