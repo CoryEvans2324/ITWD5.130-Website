@@ -37,3 +37,26 @@
 .field label {
 	text-transform: capitalize;
 }
+
+@media (min-width: 750px) {
+	.content-heading {
+		display: grid;
+		grid-template-areas:
+		"logo title"
+		"logo description";
+	}
+
+	.content-heading img {
+		grid-area: logo;
+		width: 150px;
+	}
+
+	.content-heading h1 {
+		grid-area: title;
+		text-align: justify;
+	}
+
+	.content-heading p {
+		grid-area: description;
+	}
+}
