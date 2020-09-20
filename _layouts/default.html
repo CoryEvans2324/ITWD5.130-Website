@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{ page.title }}</title>
 
+	<link rel="shortcut icon" href="/images/logo/logo.svg" type="image/svg+xml">
+
 	<link rel="stylesheet" href="/css/default-layout.css">
 	<script defer src="/js/default-layout.js"></script>
 
@@ -21,7 +23,7 @@
 	{% endif %}
 
 </head>
-<body>
+<body onresize="on_layout_resize();">
 	<div class="layout-header">
 		<div class="layout-banner">
 			<a href="/">
@@ -30,7 +32,7 @@
 			</a>
 		</div>
 		<div class="layout-header-menu">
-			<a class="{% if page.active_nav == 'Home' %}layout-nav-active{% endif %}" href="/">Home</a>
+			<a class="layout-nav-item {% if page.active_nav == 'Home' %}layout-nav-active{% endif %}" href="/">Home</a>
 			<a href="#" id="layout-nav-toggle" onclick="toggle_nav();">&#9776;</a>
 		</div>
 		<nav id="layout-nav" class="layout-nav">

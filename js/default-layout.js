@@ -15,5 +15,16 @@ function toggle_nav()
 		btn.innerHTML = '×';
 	}
 
-	nav_toggle_shown_state = nav.style.height == 'auto';
+	nav_toggle_shown_state = nav.style.maxHeight == '400px';
+}
+
+function on_layout_resize()
+{
+	var nav = document.getElementById('layout-nav');
+
+	if (document.body.clientWidth >= 750)
+	{
+
+		nav.style.maxHeight = null;
+	}
 }

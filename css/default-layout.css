@@ -15,8 +15,9 @@ body {
 	font-family: 'Roboto', sans-serif;
 	position: relative;
 	background-color: var(--main-dull-color);
-	max-width: 1200px;
 	margin: 0 auto;
+	max-width: 1200px;
+	min-width: 300px;
 }
 
 a {
@@ -44,7 +45,7 @@ a {
 .layout-header-menu {
 	font-size: 32px;
 	font-weight: 800;
-	margin: 2px 10px;
+	padding: 0 10px;
 
 	color: white;
 }
@@ -71,7 +72,10 @@ a {
 .layout-nav-item {
 	position: relative;
 	text-align: center;
-	padding: 0.8em 2em;
+}
+
+.layout-nav .layout-nav-item {
+	padding: 0.8em 0;
 }
 
 .layout-nav-item:hover {
