@@ -36,10 +36,24 @@
 			<a href="#" id="layout-nav-toggle" onclick="toggle_nav();">&#9776;</a>
 		</div>
 		<nav id="layout-nav" class="layout-nav">
-				<a class="layout-nav-item {% if page.active_nav == 'Services' %}layout-nav-active{% endif %}" href="/services.html">Services</a>
-				<a class="layout-nav-item {% if page.active_nav == 'Projects' %}layout-nav-active{% endif %}" href="/projects.html">Projects</a>
-				<a class="layout-nav-item {% if page.active_nav == 'Contact Us' %}layout-nav-active{% endif %}" href="/contact-us.html">Contact Us</a>
-				<a class="layout-nav-item {% if page.active_nav == 'About Us' %}layout-nav-active{% endif %}" href="/about-us.html">About Us</a>
+			<div class="layout-nav-item {% if page.active_nav == 'Services' %}layout-nav-active{% endif %}">
+				<a href="/services.html">Services</a>
+				<div class="layout-nav-submenu">
+					<a href="/">YO</a>
+				</div>
+			</div>
+			<div class="layout-nav-item {% if page.active_nav == 'Projects' %}layout-nav-active{% endif %}">
+				<a href="/projects.html">Projects</a>
+				<div class="layout-nav-submenu">
+					<a href="/">YO</a>
+				</div>
+			</div>
+			<div class="layout-nav-item {% if page.active_nav == 'Contact Us' %}layout-nav-active{% endif %}">
+				<a href="/contact-us.html">Contact Us</a>
+			</div>
+			<div class="layout-nav-item {% if page.active_nav == 'About Us' %}layout-nav-active{% endif %}">
+				<a href="/about-us.html">About Us</a>
+			</div>
 		</nav>
 	</div>
 
