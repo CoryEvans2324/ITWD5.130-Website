@@ -4,6 +4,7 @@ title: Jimmy's Plumbing
 active_nav: Home
 css:
  - /css/index.css
+ - /css/contact-us.css
 ---
 
 <div class="content-heading">
@@ -25,32 +26,28 @@ css:
 </div>
 
 
-<div class="quote">
-	<form action="">
-		<h1>Request A Quote</h1>
-		<div class="field">
-			<label class="label-name" for="name">
-				<span class="label-content">name</span>
-			</label>
+<div>
+	<form class="form" action="/">
+		<h1>Request a quote</h1>
+		<hr>
+		<div class="form-field">
+			<label for="name">Name</label>
 			<input type="text" name="name" id="input-name">
 		</div>
-		<div class="field">
-			<label class="label-name" for="phone">
-				<span class="label-content">phone</span>
-			</label>
+
+		<div class="form-field">
+			<label for="phone">Phone</label>
 			<input type="text" name="phone" id="input-phone">
 		</div>
-		<div class="field">
-			<label class="label-name" for="email">
-				<span class="label-content">email</span>
-			</label>
+
+		<div class="form-field">
+			<label for="email">Email</label>
 			<input type="email" name="email" id="input-email">
 		</div>
-		<div class="field">
-			<label class="label-name" for="message">
-				<span class="label-content">message</span>
-			</label>
-			<textarea name="message" id="input-message" rows="10"></textarea>
+
+		<div class="form-field">
+			<label for="message">Message</label>
+			<textarea name="message" id="input-message" cols="30" rows="10"></textarea>
 		</div>
 	</form>
 </div>
