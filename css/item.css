@@ -1,10 +1,10 @@
-.services {
+.items {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
 	grid-gap: 5px;
 }
 
-.services-card {
+.item-card {
 	cursor: pointer;
 	text-align: center;
 	border: 1px solid var(--main-dark-color);
@@ -12,21 +12,21 @@
 	padding: 10px;
 }
 
-.services-card img {
+.item-content img {
 	width: 200px;
 	height: 200px;
 }
 
-.services-card p {
+.item-content p {
 	text-align: left;
 }
 
-.services-title hr {
+.item-title hr {
 	margin-bottom: 1em;
 }
 
-@media (min-width: 750px) {
-	.services {
+@media (min-width: 900px) {
+	.items {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }

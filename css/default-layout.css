@@ -89,7 +89,8 @@ ul {
 	text-align: center;
 }
 
-.layout-nav .layout-nav-item {
+.layout-nav .layout-nav-item a {
+	display: block;
 	padding: 0.8em 0;
 }
 
