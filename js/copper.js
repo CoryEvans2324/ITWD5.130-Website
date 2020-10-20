@@ -26,6 +26,4 @@ function getNumberOfSlides() {
 	return slideshow.getElementsByClassName('slideshow-panel').length;
 }
 
-window.onload = () => {
-	showSlide()
-}
+onload_functions.push(showSlide)

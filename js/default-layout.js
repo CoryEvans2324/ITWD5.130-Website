@@ -1,4 +1,5 @@
 var nav_toggle_shown_state = false;
+var onload_functions = [];
 
 function toggle_nav()
 {
@@ -27,4 +28,20 @@ function on_layout_resize()
 
 		nav.style.maxHeight = null;
 	}
+}
+
+function display_scrollToTop() {
+	if (window.innerHeight < document.body.clientHeight) {
+		document.getElementById('scroll-to-top').style.display = 'block';
+	}
+}
+
+window.onload = () => {
+	for (let i = 0; i < onload_functions.length; i++) {
+		onload_functions[i]();
+	}
+}
+
+document.body.onscroll = () => {
+	display_scrollToTop()
 }
