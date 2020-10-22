@@ -1,6 +1,24 @@
 .slideshow {
+	position: relative;
 	margin: 0 auto;
 	width: fit-content;
+}
+
+.slideshow .button {
+	position: absolute;
+	font-size: 32px;
+	color: white;
+	top: 50%;
+	cursor: pointer;
+	user-select: none;
+}
+
+#button-left {
+	left: -1em;
+}
+
+#button-right {
+	right: -1em;
 }
 
 .slideshow-panel {
@@ -9,11 +27,12 @@
 }
 
 .slideshow-panel .image {
-	width: 100%;
+	height: 450px;
 }
 
 .slideshow-panel .summary {
 	height: 2em;
+	text-align: center;
 }
 
 .single-images {

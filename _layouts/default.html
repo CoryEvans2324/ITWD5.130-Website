@@ -69,9 +69,12 @@
 	</div>
 
 	<div id="scroll-to-top" class="scroll-to-top" style="display: none;">
-		<a href="#layout-top">
+		<a href="#layout-top" onclick="document.getElementById('scroll-to-top-playback').play();">
 			<img width="50" src="/images/placeholder/200x200.jpg" alt="">
 		</a>
+		<audio id="scroll-to-top-playback">
+			<source src="/audio/flush.ogg" type="audio/ogg">
+		</audio>
 	</div>
 </body>
 </html>
