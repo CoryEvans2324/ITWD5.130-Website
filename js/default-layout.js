@@ -36,10 +36,20 @@ function display_scrollToTop() {
 	}
 }
 
+function sticky_footer() {
+	if (window.innerHeight >= document.body.clientHeight) {
+		var footer = document.getElementById('layout-footer');
+		footer.style.position = 'absolute'
+		footer.style.bottom = 0
+		footer.style.width = '100%'
+	}
+}
+
 window.onload = () => {
 	for (let i = 0; i < onload_functions.length; i++) {
 		onload_functions[i]();
 	}
+	sticky_footer()
 }
 
 document.body.onscroll = () => {
