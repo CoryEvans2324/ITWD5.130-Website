@@ -7,14 +7,8 @@
 
 	<link rel="shortcut icon" href="/images/logo/logo.svg" type="image/svg+xml">
 
-	<link rel="stylesheet" href="/css/default-layout.css">
+	<link rel="stylesheet" href="/css/style.css">
 	<script defer src="/js/default-layout.js"></script>
-
-	{% if page.css %}
-		{% for css_file in page.css %}
-			<link rel="stylesheet" href="{{ css_file | relative_url }}">
-		{% endfor %}
-	{% endif %}
 
 	{% if page.js %}
 		{% for js_file in page.js %}
